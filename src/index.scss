@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@400;500&display=swap");
+
+@mixin flexstyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e5e5e5;
+  height: 100vh;
+}
+
+@mixin navDecor {
+  margin-right: 2em;
+  color: rgb(233, 233, 233);
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  background-color: #c70039;
+  color: #f4f4f4;
+  padding-top: 1em;
+
+  h1 {
+    margin-left: 1em;
+    font-family: "Poppins", sans-serif;
+  }
+  .navlink {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+    // border: 2px solid rgb(0, 0, 0);
+    background-color: burlywood;
+    padding: 1em;
+    .homie {
+      @include navDecor();
+      color: black;
+    }
+    .workie {
+      @include navDecor();
+      color: black;
+    }
+    .skillie {
+      @include navDecor();
+      color: black;
+    }
+    .hirei {
+      @include navDecor();
+      color: black;
+    }
+  }
+}
+
+.home {
+  @include flexstyle();
+  img {
+    height: 380px;
+    width: 414px;
+    // padding-top: 3em;
+    margin-top: 4em;
+  }
+  h1 {
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 3;
+  }
+  p {
+    font-size: 18px;
+  }
+  button {
+    font-size: 22px;
+    margin-top: 4em;
+    font-family: "Poppins", sans-serif;
+    border-radius: 2em;
+    padding: 0.3em 2em;
+    background-color: #ffb65e;
+    border-color: #ffb65e;
+  }
+}
+
+.hire {
+  @include flexstyle();
+  img {
+    height: 380px;
+    width: 414px;
+    margin-top: 2em;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 3;
+    margin-top: 3em;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 3em;
+  }
+  button {
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
+    margin-right: 1.3em;
+    border-radius: 2em;
+    padding: 0.3em 1em;
+    background-color: #ffb65e;
+    border-color: #ffb65e;
+    box-shadow: none;
+  }
+  .hire_btn {
+    display: flex;
+  }
+}
+
+.work {
+  @include flexstyle();
+
+  padding-bottom: 10em;
+  h1 {
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1em;
+  }
+}
+
+.skills {
+  @include flexstyle();
+  display: block;
+  h1 {
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    // margin-top: 3em;
+    // margin: 2em;
+    padding-top: 3em;
+    padding: 2em;
+  }
+  img {
+    height: 200px;
+    width: 200px;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    border-radius: 22px;
+    object-fit: cover;
+  }
+}
+
+//
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin-top: 2em;
+  border-radius: 10px;
+  background-color: rgb(236, 236, 236);
+
+  img {
+    width: 100%;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 16px 32px 0 rgba(10, 10, 10, 0.2);
+  cursor: pointer;
+}
+.container {
+  padding: 2px 16px;
+
+  // color: rgba(70, 238, 20, 0.2);
+  h2 {
+    letter-spacing: 0.2px;
+    // font-family: "Poppins", sans-serif;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400;
+    padding-bottom: 0.2em;
+  }
+  p {
+    margin-bottom: 1em;
+    // font-family: "Palanquin", sans-serif;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .home {
+    display: flex;
+    // grid-template-columns: 60% auto;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    img {
+      height: 450px;
+      width: 500px;
+      margin-bottom: 10em;
+    }
+    .content {
+      margin-right: 5em;
+      margin-bottom: 8em;
+      h1 {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .hire {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    .hire_content {
+      margin-right: 5em;
+      margin-bottom: 16em;
+      h1 {
+        font-size: 28px;
+      }
+    }
+    img {
+      height: 450px;
+      width: 500px;
+      margin-bottom: 18em;
+    }
+    .hire_btn {
+      margin-top: 2em;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    .navlink {
+      margin-right: 4em;
+      padding-right: 2em;
+      padding-top: 0.5em;
+      font-size: 14px;
+      font-family: "Poppins", sans-serif;
+      background-color: transparent;
+      .homie {
+        @include navDecor();
+      }
+      .workie {
+        @include navDecor();
+      }
+      .skillie {
+        @include navDecor();
+      }
+      .hirei {
+        @include navDecor();
+      }
+    }
+  }
+}
